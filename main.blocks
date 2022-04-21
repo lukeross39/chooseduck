@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="v-C#H8M8$8RPmM$yC1g/">Player</variable><variable type="KIND_SpriteKind" id="_d=Py.yG%4ZLhcL@!3=E">Projectile</variable><variable type="KIND_SpriteKind" id="lXz0AO|;Ssarv@+ivKQi">Food</variable><variable type="KIND_SpriteKind" id="RR72.8~O-G@x7hPnSr;!">Enemy</variable><variable id="m99|@HnML=@b-3!UrK61">mySprite</variable><variable id="YQ_wFF:W*?w8+S^ex$Y*">duckcolor</variable></variables><block type="pxt-on-start" id=".J!2ug,G~0:H|3F8Dnh`" x="0" y="0"><statement name="HANDLER"><block type="game_show_long_text" id="y3qB+dR6!rp.XtQCNaIf"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="(+fb^*?(#[;A_$h,~s)W"><field name="TEXT">Welcome to Ducky Jump!</field></shadow></value><next><block type="game_show_long_text" id="+pTXE-ED)9u(pWE(`G=R"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="!3IzyFyDGMl]WTX5cjk3"><field name="TEXT">Theres a few rules to this game...</field></shadow></value><next><block type="game_show_long_text" id="gtro9PxX0F]/7+4:UKT0"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="=6axeSNF/QnnOl=pcxfR"><field name="TEXT">#1. Reach the purple finish line. And unlock the chest  </field></shadow></value><next><block type="game_show_long_text" id="vePW2VPl+-UM?58YfHBm"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="SQ_DXLZBO|eoqHQ;lm.0"><field name="TEXT">#2. Collect the three red keys scattered throughout the map.</field></shadow></value><next><block type="game_show_long_text" id=")YKOX?MsQRboCXgDh|wU"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="nukN|2T@^{In;.rXPQkc"><field name="TEXT">Now, lets choose your duck</field></shadow></value><next><block type="variables_set" id="}5#_a#T~D[DEt)jL*y9w"><field name="VAR" id="YQ_wFF:W*?w8+S^ex$Y*">duckcolor</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="gameask" id="xQ5Yt)]iQ87:{L*BoAkv"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="title"><shadow type="text"><field name="TEXT"></field></shadow><block type="text_join" id="yN2@|~=gF(sQ|/%Wg/Az"><mutation items="4"></mutation><value name="ADD0"><shadow type="text" id="K[uN*a5n4g+;lq63qbzc"><field name="TEXT">A for yellow</field></shadow></value><value name="ADD1"><shadow type="text" id="fpa:wrY=IHHvw}SqrZ]z"><field name="TEXT"> B for Purple</field></shadow></value><value name="ADD2"><shadow type="text"><field name="TEXT"></field></shadow><block type="keyispressed" id="_ERx6_4y[Bs`umr=TfT;"><field name="button">controller.A</field></block></value><value name="ADD3"><shadow type="text"><field name="TEXT"></field></shadow><block type="keyispressed" id="0Y$NKX{|:H6+Z{KCP5+P"><field name="button">controller.B</field></block></value></block></value></block></value><next><block type="controls_if" id="Y=knta~aWyV@dg[BaHm%"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="keyispressed" id=")Q#2z:rqm_1SHD}R,vjk"><field name="button">controller.A</field></block></value><statement name="DO0"><block type="variables_set" id="CrwykdNX+=3MjQo(8%_w"><field name="VAR" id="m99|@HnML=@b-3!UrK61">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="|^c$qS!;6o3[Er-#Q)]b"><value name="img"><shadow type="screen_image_picker" id="G;fKFQ)}L/:1[CGAyQ_^"><field name="img">img`
+. . . . . . . . . . b 5 b . . . 
+. . . . . . . . . b 5 b . . . . 
+. . . . . . b b b b b b . . . . 
+. . . . . b b 5 5 5 5 5 b . . . 
+. . . . b b 5 d 1 f 5 d 4 c . . 
+. . . . b 5 5 1 f f d d 4 4 4 b 
+. . . . b 5 5 d f b 4 4 4 4 b . 
+. . . b d 5 5 5 5 4 4 4 4 b . . 
+. . b d d 5 5 5 5 5 5 5 5 b . . 
+. b d d d d 5 5 5 5 5 5 5 5 b . 
+b d d d b b b 5 5 5 5 5 5 5 b . 
+c d d b 5 5 d c 5 5 5 5 5 5 b . 
+c b b d 5 d c d 5 5 5 5 5 5 b . 
+. b 5 5 b c d d 5 5 5 5 5 d b . 
+b b c c c d d d d 5 5 5 b b . . 
+. . . c c c c c c c c b b . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"G;fKFQ)}L/:1[CGAyQ_^"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="[IAb3)5:xoL9$,@/Rf/("><field name="MEMBER">Player</field></shadow></value></block></value></block></statement><next><block type="controls_if" id="GJ..`I[A0c}VLtjgH^/P"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="keyispressed" id="V#TRr0]aBirG?iz?De+n"><field name="button">controller.B</field></block></value><statement name="DO0"><block type="variables_set" id="8Id_f9g;u6emsYMjfwN9"><field name="VAR" id="m99|@HnML=@b-3!UrK61">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="GI6j(W!Pz02ck%tBo(h:"><value name="img"><shadow type="screen_image_picker" id="M%`;tMp,6HAD*H+m,UD]"><field name="img">img`
+. . . . . . . . . . b a b . . . 
+. . . . . . . . . b a b . . . . 
+. . . . . . b b b b b b . . . . 
+. . . . . b b a a a a a b . . . 
+. . . . b b a d 1 f a d 4 c . . 
+. . . . b a a 1 f f d d 4 4 4 b 
+. . . . b a a d f b 4 4 4 4 b . 
+. . . b d a a a a 4 4 4 4 b . . 
+. . b d d a a a a a a a a b . . 
+. b d d d d a a a a a a a a b . 
+b d d d b b b a a a a a a a b . 
+c d d b a a d c a a a a a a b . 
+c b b d a d c d a a a a a a b . 
+. b a a b c d d a a a a a d b . 
+b b c c c d d d d a a a b b . . 
+. . . c c c c c c c c b b . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"M%`;tMp,6HAD*H+m,UD]"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id=";g1+q,,VAM_#1*_iN0M:"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
